@@ -8,8 +8,8 @@ interface Props {
 }
 
 const REGION_ANIMATION = {
-  whileHover: { scale: 1.2 },
-  whileTap: { scale: 0.98 },
+  // whileHover: { scale: 1.2 },
+  // whileTap: { scale: 0.98 },
   fill: 'white',
   fillOpacity: 0.1,
 };
@@ -32,13 +32,11 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
 
         <g>
           <motion.g
-            className="cursor-pointer"
             onClick={() => setRegion('australia')}
             {...REGION_ANIMATION}
           >
             <g id="australia" filter="url(#filter0_d)">
               <circle
-                className="cursor-pointer"
                 cx="948"
                 cy="403"
                 r="7.5"
@@ -47,14 +45,9 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
               />
             </g>
           </motion.g>
-          <motion.g
-            className="cursor-pointer"
-            onClick={() => setRegion('us-east')}
-            {...REGION_ANIMATION}
-          >
+          <motion.g onClick={() => setRegion('us-east')} {...REGION_ANIMATION}>
             <g id="us_east" filter="url(#filter1_d)">
               <circle
-                className="cursor-pointer"
                 cx="199.336"
                 cy="143.631"
                 r="7.5"
@@ -63,14 +56,9 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
               />
             </g>
           </motion.g>
-          <motion.g
-            className="cursor-pointer"
-            onClick={() => setRegion('us-west')}
-            {...REGION_ANIMATION}
-          >
+          <motion.g onClick={() => setRegion('us-west')} {...REGION_ANIMATION}>
             <g id="us_west" filter="url(#filter2_d)">
               <circle
-                className="cursor-pointer"
                 cx="65.3364"
                 cy="158.631"
                 r="7.5"
@@ -79,14 +67,9 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
               />
             </g>
           </motion.g>
-          <motion.g
-            className="cursor-pointer"
-            onClick={() => setRegion('brazil')}
-            {...REGION_ANIMATION}
-          >
+          <motion.g onClick={() => setRegion('brazil')} {...REGION_ANIMATION}>
             <g id="brazil" filter="url(#filter3_d)">
               <circle
-                className="cursor-pointer"
                 cx="299"
                 cy="350"
                 r="7.5"
@@ -96,13 +79,11 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
             </g>
           </motion.g>
           <motion.g
-            className="cursor-pointer"
             onClick={() => setRegion('south-africa')}
             {...REGION_ANIMATION}
           >
             <g id="south_africa" filter="url(#filter4_d)">
               <circle
-                className="cursor-pointer"
                 cx="532"
                 cy="399"
                 r="7.5"
@@ -112,13 +93,11 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
             </g>
           </motion.g>
           <motion.g
-            className="cursor-pointer"
             onClick={() => setRegion('europe-west')}
             {...REGION_ANIMATION}
           >
             <g id="uk" filter="url(#filter5_d)">
               <circle
-                className="cursor-pointer"
                 cx="456"
                 cy="97"
                 r="7.5"
@@ -127,14 +106,9 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
               />
             </g>
           </motion.g>
-          <motion.g
-            className="cursor-pointer"
-            onClick={() => setRegion('india')}
-            {...REGION_ANIMATION}
-          >
+          <motion.g onClick={() => setRegion('india')} {...REGION_ANIMATION}>
             <g id="india" filter="url(#filter6_d)">
               <circle
-                className="cursor-pointer"
                 cx="702"
                 cy="218"
                 r="7.5"
@@ -143,14 +117,9 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
               />
             </g>
           </motion.g>
-          <motion.g
-            className="cursor-pointer"
-            onClick={() => setRegion('japan')}
-            {...REGION_ANIMATION}
-          >
+          <motion.g onClick={() => setRegion('japan')} {...REGION_ANIMATION}>
             <g id="japan" filter="url(#filter7_d)">
               <circle
-                className="cursor-pointer"
                 cx="900"
                 cy="154"
                 r="7.5"

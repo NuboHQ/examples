@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-import { CountryCode } from '@/types/regions';
 
 interface Props {
-  countryCode: CountryCode;
+  countryCode: string;
 }
 
 const FlagIcon: FC<Props> = ({ countryCode }) => {
