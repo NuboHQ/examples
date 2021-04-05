@@ -46,16 +46,16 @@ const regions: Region[] = [
 
 export const locations: Location[] = [
   {
-    id: 'london',
-    name: 'London',
-    country: 'UK',
-    countryLong: 'United Kingdom',
-  },
-  {
     id: 'california',
     name: 'California',
     country: 'US',
     countryLong: 'United States',
+  },
+  {
+    id: 'london',
+    name: 'London',
+    country: 'UK',
+    countryLong: 'United Kingdom',
   },
   {
     id: 'virginia',
