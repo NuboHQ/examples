@@ -9,37 +9,37 @@ const regions: Region[] = [
   },
   {
     id: 'us-east',
-    name: 'Virginia',
+    name: 'US East',
     flagId: 'usa',
   },
   {
     id: 'europe-west',
-    name: 'London',
+    name: 'Europe West',
     flagId: 'uk',
   },
   {
     id: 'brazil',
-    name: 'São Paulo',
+    name: 'Brazil',
     flagId: 'brazil',
   },
   {
     id: 'australia',
-    name: 'Sydney',
+    name: 'Australia',
     flagId: 'australia',
   },
   {
     id: 'south-africa',
-    name: 'Cape Town',
+    name: 'South Africa',
     flagId: 'south-africa',
   },
   {
     id: 'india',
-    name: 'Mumbai',
+    name: 'India',
     flagId: 'india',
   },
   {
     id: 'japan',
-    name: 'Tokyo',
+    name: 'Japan',
     flagId: 'japan',
   },
 ];
