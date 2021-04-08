@@ -1,2 +1,1 @@
-# nubo-examples
-Nubo Examples
+# Nubo Examples
