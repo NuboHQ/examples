@@ -1,6 +1,6 @@
 {
   "name": "nubo-nextjs",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "scripts": {
     "dev": "next dev -p 4500",
     "build": "next build",

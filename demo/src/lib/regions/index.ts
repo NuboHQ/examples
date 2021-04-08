@@ -120,20 +120,20 @@ export const providers: Provider[] = [
   },
 ];
 
-export const getRegion = (regionId: string): Region => {
+export const getRegion = (regionId: string): Region | null => {
   const region = find(regions, { id: regionId });
 
-  return region || regions[0];
+  return region || null;
 };
 
-export const getLocation = (locationId: string): Location => {
+export const getLocation = (locationId: string): Location | null => {
   const location = find(locations, { id: locationId });
 
-  return location || locations[0];
+  return location || null;
 };
 
-export const getProvider = (providerId: string): Provider => {
+export const getProvider = (providerId: string): Provider | null => {
   const provider = find(providers, { id: providerId });
 
-  return provider || providers[0];
+  return provider || null;
 };

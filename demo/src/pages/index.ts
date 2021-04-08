@@ -1,14 +1,17 @@
 import { GetServerSideProps } from 'next';
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
 
 export { HomePage as default } from '@/components/pages';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
-      appNameId: process.env.NUBO_APP_NAME,
-      regionId: process.env.NUBO_REGION,
-      locationId: process.env.NUBO_LOCATION,
-      providerId: process.env.NUBO_CLOUD_PROVIDER,
+      appNameId: publicRuntimeConfig.appNameId,
+      regionId: publicRuntimeConfig.region,
+      locationId: publicRuntimeConfig.location,
+      providerId: publicRuntimeConfig.provider,
     },
   };
 };
