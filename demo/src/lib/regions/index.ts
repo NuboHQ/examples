@@ -107,15 +107,15 @@ export const providers: Provider[] = [
     name: 'Amazon Web Services',
   },
   {
-    id: 'azure',
+    id: 'az',
     name: 'Microsoft Azure',
   },
   {
-    id: 'digitalocean',
+    id: 'do',
     name: 'DigitalOcean',
   },
   {
-    id: 'google-cloud',
+    id: 'gcp',
     name: 'Google Cloud',
   },
 ];
