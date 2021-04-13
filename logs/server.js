@@ -6,7 +6,7 @@ app.use(morgan('combined'));
 
 app.use('*', (req, res) => {
   res.send(
-    '<h1 style="font-family: sans-serif; position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);">Logs Example on Nubo Apps</h1>',
+    '<h1 style="font-family: sans-serif; text-align: center; position: fixed; top: 45%; left: 50%; transform: translateX(-50%) translateY(-50%);">Logs Example <span style="white-space: nowrap">on Nubo Apps</span></h1>',
   );
 });
 
