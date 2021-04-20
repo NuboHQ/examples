@@ -1,7 +1,9 @@
 const app = require('express')();
+const helmet = require('helmet');
 const morgan = require('morgan');
 const PORT = process.env.PORT || 3000;
 
+app.use(helmet());
 app.use(morgan('combined'));
 
 app.use('*', (req, res) => {
