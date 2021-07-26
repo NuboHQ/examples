@@ -106,24 +106,30 @@ const Map: FC<Props> = ({ currentRegionId, setRegion }) => {
               />
             </g>
           </motion.g>
-          <motion.g onClick={() => setRegion('india')} {...REGION_ANIMATION}>
-            <g id="india" filter="url(#filter6_d)">
+          <motion.g
+            onClick={() => setRegion('asia-south')}
+            {...REGION_ANIMATION}
+          >
+            <g id="asia-south" filter="url(#filter6_d)">
               <circle
                 cx="702"
                 cy="218"
                 r="7.5"
-                stroke={getRegionColor('india')}
+                stroke={getRegionColor('asia-south')}
                 strokeWidth="5"
               />
             </g>
           </motion.g>
-          <motion.g onClick={() => setRegion('japan')} {...REGION_ANIMATION}>
-            <g id="japan" filter="url(#filter7_d)">
+          <motion.g
+            onClick={() => setRegion('asia-northeast')}
+            {...REGION_ANIMATION}
+          >
+            <g id="asia-northeast" filter="url(#filter7_d)">
               <circle
                 cx="900"
                 cy="154"
                 r="7.5"
-                stroke={getRegionColor('japan')}
+                stroke={getRegionColor('asia-northeast')}
                 strokeWidth="5"
               />
             </g>
