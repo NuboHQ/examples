@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <title>Fastify - Nubo</title>
+    <style>
+      html, body {
+        font-family: 'Mulish', sans-serif;
+      }
+
+      .inner {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+      }
+
+      .logo {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+      }
+
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .region, .location {
+        margin-top: 5px;
+        color: #999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <img class="logo" src="/public/fastify.png" alt="Fastify on Nubo" />
+
+        <div class="title">Fastify on Nubo</div>
+        <div class="region">{{ region }}</div>
+        <div class="location">{{ location }}</div>
+      </div>
+    </div>
+  </body>
+</html>
