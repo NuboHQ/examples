@@ -27,7 +27,7 @@ fastify.get('*', async (request, reply) => {
 
 const start = async () => {
   try {
-    await fastify.listen(PORT);
+    await fastify.listen(PORT, '0.0.0.0');
     console.log(`> http://localhost:${PORT}`);
     console.log(`> region: ${REGION}`);
     console.log(`> location: ${LOCATION}`);
