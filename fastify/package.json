@@ -1,0 +1,21 @@
+{
+  "name": "nubo-fastify",
+  "version": "0.0.1-alpha",
+  "description": "Fastify on Nubo",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.19.2",
+    "fastify-static": "^4.2.2",
+    "handlebars": "^4.7.7",
+    "point-of-view": "^4.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
