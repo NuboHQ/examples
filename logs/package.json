@@ -1,6 +1,8 @@
 {
   "name": "nubo-logs-example",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
+  "author": "Nubo, Inc.",
+  "license": "MIT",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"

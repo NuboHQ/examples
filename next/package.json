@@ -1,8 +1,10 @@
 {
-  "name": "nubo-nextjs",
+  "name": "nubo-next-example",
   "version": "0.0.3-alpha",
+  "author": "Nubo, Inc.",
+  "license": "MIT",
   "scripts": {
-    "dev": "next dev -p 4500",
+    "dev": "next dev -p 5555",
     "build": "next build",
     "start": "next start"
   },

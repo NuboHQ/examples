@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const LOGGER = process.env.LOGGER === 'true';
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5555;
 const REGION = process.env.NUBO_REGION || 'unknown';
 const LOCATION = process.env.NUBO_LOCATION || 'unknown';
 const fastify = require('fastify')({ logger: LOGGER });

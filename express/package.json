@@ -1,6 +1,6 @@
 {
-  "name": "nubo-node-example",
-  "version": "0.0.1",
+  "name": "nubo-express-example",
+  "version": "0.0.1-alpha",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"

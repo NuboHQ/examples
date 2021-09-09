@@ -1,0 +1,22 @@
+{
+  "name": "nubo-examples",
+  "version": "0.0.1-alpha",
+  "description": "Nubo Examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NuboHQ/nubo-examples.git"
+  },
+  "author": "Nubo, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NuboHQ/nubo-examples/issues"
+  },
+  "homepage": "https://github.com/NuboHQ/nubo-examples#readme",
+  "devDependencies": {
+    "prettier": "^2.4.0"
+  }
+}
