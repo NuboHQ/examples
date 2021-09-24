@@ -1,10 +1,10 @@
 const Hapi = require('@hapi/hapi');
-const PORT = process.env.PORT || 5555;
+const PORT = ~~process.env.PORT || 5555;
 
 const init = async () => {
   const server = Hapi.server({
     port: PORT,
-    host: 'localhost',
+    host: '0.0.0.0',
   });
 
   server.route({
