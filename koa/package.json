@@ -1,0 +1,18 @@
+{
+  "name": "nubo-koa-example",
+  "version": "0.0.1-alpha",
+  "description": "Nubo Koa example",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "koa": "^2.13.3"
+  }
+}
