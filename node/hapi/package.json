@@ -1,0 +1,19 @@
+{
+  "name": "nubo-node-hapi-example",
+  "version": "0.0.1-alpha",
+  "description": "Hapi on Nubo",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nubo, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
