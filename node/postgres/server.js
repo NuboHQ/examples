@@ -3,13 +3,7 @@ const { Client } = require('pg');
 const fastify = require('fastify')();
 
 const PORT = process.env.PORT || 5555;
-const client = new Client({
-  host: process.env.POSTGRES_HOST || 'localhost',
-  port: process.env.POSTGRES_PORT || 5432,
-  user: process.env.POSTGRES_USER || 'postgres',
-  password: process.env.POSTGRES_PASSWORD,
-  database: process.env.POSTGRES_DATABASE || 'postgres',
-});
+const client = new Client(process.env.POSTGRES_URL);
 
 const start = async () => {
   try {
