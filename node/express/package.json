@@ -1,5 +1,5 @@
 {
-  "name": "nubo-express-example",
+  "name": "nubo-node-express-example",
   "version": "0.0.1-alpha",
   "scripts": {
     "dev": "nodemon server.js",

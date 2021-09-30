@@ -1,7 +1,7 @@
 {
-  "name": "nubo-fastify-example",
+  "name": "nubo-node-postgres-example",
   "version": "0.0.1-alpha",
-  "description": "Fastify on Nubo",
+  "description": "Node/Postgres on Nubo",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
@@ -11,9 +11,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "fastify": "^3.19.2",
-    "fastify-static": "^4.2.2",
-    "handlebars": "^4.7.7",
-    "point-of-view": "^4.15.1"
+    "pg": "^8.7.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

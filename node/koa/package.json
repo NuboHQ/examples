@@ -1,5 +1,5 @@
 {
-  "name": "nubo-koa-example",
+  "name": "nubo-node-koa-example",
   "version": "0.0.1-alpha",
   "description": "Nubo Koa example",
   "main": "server.js",
