@@ -8,7 +8,7 @@ export { HomePage as default } from '@/components/pages';
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
-      appNameId: publicRuntimeConfig.appNameId,
+      serviceNameId: publicRuntimeConfig.serviceNameId,
       regionId: publicRuntimeConfig.region,
       locationId: publicRuntimeConfig.location,
       providerId: publicRuntimeConfig.provider,

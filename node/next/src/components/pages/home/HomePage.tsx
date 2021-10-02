@@ -6,14 +6,14 @@ import Map from './map/Map';
 import { getLocation, getProvider, getRegion } from '@/lib/regions';
 
 interface Props {
-  appNameId: string;
+  serviceNameId: string;
   regionId: string;
   locationId: string;
   providerId: string;
 }
 
 const HomePage: NextPage<Props> = ({
-  appNameId,
+  serviceNameId,
   regionId,
   locationId,
   providerId,
@@ -23,7 +23,7 @@ const HomePage: NextPage<Props> = ({
   const provider = getProvider(providerId);
 
   return (
-    <BasicLayout pageId="home" title={`${appNameId} - Nubo Demo`}>
+    <BasicLayout pageId="home" title={`${serviceNameId} - Nubo Demo`}>
       {region && location && provider ? (
         <>
           <div className="grid gap-y-4 md:grid-cols-2 md:gap-10 max-w-4xl m-auto px-10">
