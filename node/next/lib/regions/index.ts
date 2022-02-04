@@ -1,5 +1,5 @@
+import { Location, Provider, Region } from '@/types/regions';
 import { find } from 'lodash';
-import { Provider, Region, Location } from '@/types/regions';
 
 const regions: Region[] = [
   {

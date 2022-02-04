@@ -1,4 +1,7 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  reactStrictMode: true,
   publicRuntimeConfig: {
     serviceNameId: process.env.NUBO_SERVICE_NAME || 'unkown',
     region: process.env.NUBO_REGION || 'unkown',
@@ -12,3 +15,5 @@ module.exports = {
     domains: ['assets.nubo.app'],
   },
 };
+
+module.exports = nextConfig;
