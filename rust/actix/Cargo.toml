@@ -1,7 +1,0 @@
-[package]
-name = "nubo-rust-actix-example"
-version = "0.1.0"
-edition = "2018"
-
-[dependencies]
-actix-web = "3"
