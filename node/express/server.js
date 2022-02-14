@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 5555;
 const REGION = process.env.NUBO_REGION || 'unknown';
 const LOCATION = process.env.NUBO_LOCATION || 'unknown';
 
-const VERSION = '1.0';
+const VERSION = '1.1';
 
 server.use(helmet());
 
