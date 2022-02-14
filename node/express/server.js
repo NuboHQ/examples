@@ -12,10 +12,10 @@ server.use('*', (req, res) => {
   res.send(
     `<div style="font-family: sans-serif; text-align: center; position: fixed; top: 45%; left: 50%; transform: translateX(-50%) translateY(-50%);">
       <h1>Express on Nubo</h1>
-      <p style="color: #777">${VERSION}</p>
+      < style="color: #777">${VERSION}
       <br/>
       <br/>
-      <p style="color: #777">${REGION}
+      ${REGION}
       <br/>
       <br/>
       ${LOCATION}</p>
