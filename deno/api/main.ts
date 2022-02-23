@@ -7,6 +7,7 @@ Nubo.router.get('/', ({ response }) => {
     name: 'deno-test',
     version: VERSION,
     nubo: {
+      runtime: Deno.env.get('NUBO_RUNTIME'),
       cloudProvider: Nubo.config.cloudProvider,
       region: Nubo.config.region,
       location: Nubo.config.location,
