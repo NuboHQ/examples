@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const LOGGER = process.env.LOGGER === 'true';
 const PORT = process.env.PORT || 5555;
+const RUNTIME = process.env.NUBO_RUNTIME || 'unknown';
 const REGION = process.env.NUBO_REGION || 'unknown';
 const LOCATION = process.env.NUBO_LOCATION || 'unknown';
 const fastify = require('fastify')({ logger: LOGGER });
@@ -20,6 +21,7 @@ fastify.register(require('point-of-view'), {
 
 fastify.get('*', async (request, reply) => {
   return reply.view('/templates/index.hbs', {
+    runtime: RUNTIME,
     region: REGION,
     location: LOCATION,
   });
