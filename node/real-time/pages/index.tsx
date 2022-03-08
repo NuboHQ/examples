@@ -8,6 +8,7 @@ const Home: NextPage = () => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
+    console.log(process.env);
     const subscription = nubo.lists.subscribe<any>({
       list: 'users',
       options: {
