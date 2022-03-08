@@ -1,32 +1,35 @@
 import type { NextPage } from 'next';
+import getConfig from 'next/config';
 import Head from 'next/head';
-import nubo from 'nubo';
+// import nubo from 'nubo';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
+
+const { publicRuntimeConfig } = getConfig();
 
 const Home: NextPage = () => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
-    console.log(process.env);
-    const subscription = nubo.lists.subscribe<any>({
-      list: 'users',
-      options: {
-        filter: { age: { $gt: 20 } },
-        orderBy: {
-          name: 'asc',
-        },
-        page: 1,
-        pageSize: 25,
-      },
-      onUpdate: ({ items }) => {
-        setItems(items);
-      },
-    });
+    console.log(publicRuntimeConfig);
+    // const subscription = nubo.lists.subscribe<any>({
+    //   list: 'users',
+    //   options: {
+    //     filter: { age: { $gt: 20 } },
+    //     orderBy: {
+    //       name: 'asc',
+    //     },
+    //     page: 1,
+    //     pageSize: 25,
+    //   },
+    //   onUpdate: ({ items }) => {
+    //     setItems(items);
+    //   },
+    // });
 
-    return () => {
-      subscription.close();
-    };
+    // return () => {
+    //   subscription.close();
+    // };
   }, []);
 
   return (
