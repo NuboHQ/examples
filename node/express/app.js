@@ -8,7 +8,7 @@ const LOCATION = process.env.NUBO_LOCATION || 'unknown';
 const app = express();
 
 const dir = path.join(__dirname, './views');
-console.log(dir);
+console.log(process.env);
 
 app.use(express.static('public'));
 app.engine('handlebars', engine());
