@@ -21,5 +21,13 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => console.log(`> Ready on http://localhost:${PORT}`));
 
 setTimeout(() => {
-  console.log(JSON.stringify(process.env));
+  const env = {};
+
+  for (let key in process.env) {
+    if (key.includes('NUBO_') || key.includes('TEST_')) {
+      env[key] = process.env[key];
+    }
+  }
+
+  console.log(JSON.stringify(env));
 }, 2000);
