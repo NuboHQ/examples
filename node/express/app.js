@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => console.log(`> Ready on http://localhost:${PORT}`));
 
 setTimeout(() => {
-  console.log(process.env);
-}, 5000);
+  console.log(JSON.stringify(process.env));
+}, 2000);
