@@ -24,7 +24,7 @@ setTimeout(() => {
   const env = {};
 
   for (let key in process.env) {
-    if (key.includes('NUBO_') || key.includes('TEST_')) {
+    if (key.includes('NUBO_') || key.includes('NEXT_')) {
       env[key] = process.env[key];
     }
   }
