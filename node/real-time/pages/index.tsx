@@ -11,6 +11,7 @@ const Home: NextPage = () => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_NUBO_API_KEY);
     console.log(publicRuntimeConfig);
     // const subscription = nubo.lists.subscribe<any>({
     //   list: 'users',
