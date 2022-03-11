@@ -8,7 +8,6 @@ const LOCATION = process.env.NUBO_LOCATION || 'unknown';
 const app = express();
 
 const dir = path.join(__dirname, './views');
-console.log(process.env);
 
 app.use(express.static('public'));
 app.engine('handlebars', engine());
@@ -20,3 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`> Ready on http://localhost:${PORT}`));
+
+setTimeout(() => {
+  console.log(process.env);
+}, 5000);
