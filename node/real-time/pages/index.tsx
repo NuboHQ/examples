@@ -11,14 +11,15 @@ const Home: NextPage = () => {
     const subscription = nubo.lists.subscribe<any>({
       list: 'users',
       options: {
-        filter: { age: { $gt: 20 } },
+        // filter: { age: { $gt: 20 } },
         orderBy: {
           name: 'asc',
         },
         page: 1,
-        pageSize: 25,
+        pageSize: 50,
       },
       onUpdate: ({ items }) => {
+        console.log(items);
         setItems(items);
       },
     });
