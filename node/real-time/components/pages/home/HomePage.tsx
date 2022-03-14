@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import nubo from 'nubo';
 import React, { useCallback, useEffect, useState } from 'react';
 import { formatDate } from '../../../lib/date';
@@ -88,6 +89,10 @@ const HomePage = () => {
 
   return (
     <div className="pb-32">
+      <Head>
+        <title>Nubo - Real-Time</title>
+      </Head>
+
       <Fade />
 
       <Logo />
