@@ -1,6 +1,9 @@
 import { IncomingMessage } from 'http';
 
 export const getIpFromRequest = (req: IncomingMessage) => {
+  console.log('--');
+  console.log(req.headers);
+  console.log('--');
   const xForwardedFor = req.headers['x-forwarded-for'];
 
   if (xForwardedFor && typeof xForwardedFor === 'string') {
