@@ -1,24 +1,31 @@
 {
-  "name": "real-time",
+  "name": "real-time-requests",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 5556",
+    "dev": "next dev -p 5555",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "dayjs": "^1.10.8",
+    "framer-motion": "^6.2.8",
+    "geoip-lite": "^1.4.4",
     "next": "12.1.0",
     "nubo": "^0.0.17",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@types/geoip-lite": "^1.4.1",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "autoprefixer": "^10.4.2",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23",
     "typescript": "4.6.2"
   }
 }
