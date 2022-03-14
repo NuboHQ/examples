@@ -8,17 +8,17 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const ip = getIpFromRequest(req);
 
   try {
-    console.log('ip', ip);
     if (ip) {
       const geo = getGeo(ip);
 
       if (geo) {
+        console.log({ ...geo, ip });
         await axios.post(
           'https://api.nubo.app/lists/requests',
           {
             data: {
               country: geo.country,
-              city: geo.city,
+              city: geo.city || geo.country,
             },
           },
           {
