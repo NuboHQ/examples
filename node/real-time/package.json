@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "dayjs": "^1.10.8",
     "framer-motion": "^6.2.8",
     "geoip-lite": "^1.4.4",

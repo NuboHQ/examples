@@ -1,38 +1,14 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import nubo from 'nubo';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { formatDate } from '../../../lib/date';
+import { Request } from '../../../lib/requests/types';
 import Fade from '../../fade/Fade';
 import { Logo } from '../../Logo';
 
 const HomePage = () => {
-  const [requests, setRequests] = useState([
-    {
-      id: '1',
-      location: 'United Kingdom',
-      locationId: 'GB',
-      date: new Date().getTime(),
-    },
-    {
-      id: '2',
-      location: 'Netherlands',
-      locationId: 'NL',
-      date: new Date().getTime(),
-    },
-    {
-      id: '3',
-      location: 'United States',
-      locationId: 'US',
-      date: new Date().getTime(),
-    },
-    {
-      id: '4',
-      location: 'Germany',
-      locationId: 'DE',
-      date: new Date().getTime(),
-    },
-  ]);
+  const [requests, setRequests] = useState<Request[]>([]);
 
   const container = {
     hidden: { opacity: 0 },
@@ -45,40 +21,23 @@ const HomePage = () => {
   };
 
   const item = {
-    hidden: { opacity: 0, scale: 0.5, height: 0 },
-    show: { opacity: 1, scale: 1, height: 120 },
+    hidden: { opacity: 0, scale: 0.5 },
+    show: { opacity: 1, scale: 1 },
   };
-
-  const updateRequests = useCallback(() => {
-    setRequests([
-      {
-        id: String(requests.length + 1),
-        location: 'United States',
-        locationId: 'US',
-        date: new Date().getTime(),
-      },
-      ...requests,
-    ]);
-  }, [requests]);
-
-  useEffect(() => {
-    // setTimeout(updateRequests, 2000);
-  }, [updateRequests]);
 
   useEffect(() => {
     const subscription = nubo.lists.subscribe<any>({
-      list: 'users',
-      apiKey: 'apik-xxxxx',
+      list: 'requests',
       options: {
-        filter: { age: { $gt: 20 } },
         orderBy: {
-          name: 'asc',
+          created: 'desc',
         },
         page: 1,
         pageSize: 25,
       },
-      onUpdate: ({ items }) => {
-        console.log(items);
+      onUpdate: ({ items: requests }) => {
+        console.log(requests);
+        setRequests(requests);
       },
     });
 
@@ -115,18 +74,18 @@ const HomePage = () => {
                 <div className="rounded-sm overflow-hidden h-6">
                   <img
                     className="block h-full"
-                    src={`/assets/flags/${request.locationId}.svg`}
-                    alt={request.location}
+                    src={`/assets/flags/${request.country}.svg`}
+                    alt={request.country}
                   />
                 </div>
 
                 <div className="pt-4 text-lg md:text-xl md:pt-0">
-                  {request.location}
+                  {request.city}
                 </div>
               </div>
 
               <div className="pt-4 ml-auto md:pt-0">
-                {formatDate(request.date)}
+                {formatDate(request.created)}
               </div>
             </motion.div>
           ))}

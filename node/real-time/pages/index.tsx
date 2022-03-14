@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import { HomePage } from '../components/pages';
 import { getGeo } from '../lib/geo';
@@ -11,7 +12,22 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     if (ip) {
       const geo = getGeo(ip);
 
-      console.log(geo);
+      if (geo) {
+        await axios.post(
+          'https://api.nubo.app/lists/requests',
+          {
+            data: {
+              country: geo.country,
+              city: geo.city,
+            },
+          },
+          {
+            headers: {
+              'x-api-key': process.env.NUBO_API_KEY || '',
+            },
+          }
+        );
+      }
     }
   } catch (error) {
     console.log(error);
