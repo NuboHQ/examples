@@ -8,7 +8,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const ip = getIpFromRequest(req);
 
   try {
-    console.log({ ip });
+    console.log({ ip, headers: req.headers });
     if (ip) {
       const geo = getGeo(ip);
       console.log({ geo });
