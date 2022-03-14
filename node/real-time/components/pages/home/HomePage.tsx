@@ -80,7 +80,7 @@ const HomePage = () => {
                 </div>
 
                 <div className="pt-4 text-lg md:text-xl md:pt-0">
-                  {request.country}
+                  {request.country || 'Unknown'}
                 </div>
               </div>
 
