@@ -36,7 +36,6 @@ const HomePage = () => {
         pageSize: 25,
       },
       onUpdate: ({ items: requests }) => {
-        console.log(requests);
         setRequests(requests);
       },
     });
