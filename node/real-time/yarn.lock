@@ -1496,10 +1496,10 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
-nubo@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/nubo/-/nubo-0.0.17.tgz#d6b80af1448ca0f825a42e696e239cac8ef0351b"
-  integrity sha512-Xa+y5l0pDx5dIWAEVVsyHCtixZVggc3sjAEHUvJAPUBXrodhgc6LEdE2zhAK7DoDlCTEyGF4P51W9iNo1bmDTQ==
+nubo@^0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/nubo/-/nubo-0.0.18.tgz#4e78445540e19d5bed0e65c38ca9e196d2a2cc86"
+  integrity sha512-XG/T6MKxdDJyT8AP8aaDTzlQVI461nQJ+QCSFJjN0brmHmKm6hyHFmNcDLNDSCMcFQprPbkgzeF2RRHoJmVGJw==
   dependencies:
     isomorphic-ws "^4.0.1"
     ws "^8.5.0"
