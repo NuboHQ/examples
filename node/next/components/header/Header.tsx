@@ -6,7 +6,7 @@ interface Props {}
 
 const Header: FC<Props> = () => {
   return (
-    <div className="bg-white w-full m-auto flex items-center p-4 md:px-6 md:py:4 xl:p-8">
+    <div className="bg-white w-full m-auto flex items-center p-4 md:px-6 md:py:4 xl:p-12">
       <Logo />
     </div>
   );

@@ -64,6 +64,12 @@ export const locations: Location[] = [
     countryLong: 'United States',
   },
   {
+    id: 'ohio',
+    name: 'Ohio',
+    country: 'US',
+    countryLong: 'United States',
+  },
+  {
     id: 'london',
     name: 'London',
     country: 'UK',

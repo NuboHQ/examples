@@ -1,51 +1,98 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <title>Fastify - Nubo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fastify on Nubo</title>
+
     <style>
-      html, body {
-        font-family: 'Mulish', sans-serif;
-      }
-
-      .inner {
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        text-align: center;
-      }
-
-      .logo {
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
-      }
-
-      .title {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-
-      .region, .location {
-        margin-top: 5px;
-        color: #999;
-      }
+      html, body { font-family: 'Mulish', sans-serif; font-size: 16px; color:
+      #fff; background: rgb(200,18,230); background:
+      -moz-linear-gradient(135deg, rgba(200,18,230,1) 0%, rgba(100,45,255,1)
+      100%); background: -webkit-linear-gradient(135deg, rgba(200,18,230,1) 0%,
+      rgba(100,45,255,1) 100%); background: linear-gradient(135deg,
+      rgba(200,18,230,1) 0%, rgba(100,45,255,1) 100%); filter:
+      progid:DXImageTransform.Microsoft.gradient(startColorstr="#c812e6",endColorstr="#642dff",GradientType=1);
+      } * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:
+      grayscale; } .box { position: absolute; z-index: 10; top: 50%; left: 50%;
+      transform: translateX(-50%) translateY(-50%); width: 80%; max-width:
+      500px; background: rgba(0,1,4,0.7); border-radius: 10px; box-shadow: 30px
+      30px 70px 10px rgba(0,0,0,0.5); -webkit-box-shadow: 30px 30px 70px 10px
+      rgba(0,0,0,0.5); -moz-box-shadow: 30px 30px 70px 10px rgba(0,0,0,0.5); }
+      .box-header {padding: 40px;} .box-footer { padding: 40px; border-top: 1px
+      solid rgba(224,234,249,0.2); } h1 {font-size: 2.5rem; font-weight: 700;
+      letter-spacing: 0.1rem; color: #EDDEFF} .box-footer-item { padding: 10px
+      0; } @media (min-width: 600px) { .box-footer { display: flex; gap:40px;
+      align-items: center; } .box-footer-item {padding: 0;} } @media(min-width:
+      1000px) { .box-footer { gap: 60px; } } .label { color: #B3B5C7;
+      text-transform: uppercase; font-size: 0.7rem; font-weight: 600;
+      margin-bottom: 8px; } .background {position: absolute; z-index: 1; top:
+      0;left: 0;width: 100%;height: 100%;} .value {font-weight: 600}
+      .logo{position: absolute; z-index: 30; top: 20px; left: 50%; transform:
+      translateX(-50%); width: 35px; opacity: 0.5;} @media (min-width: 600px) {
+      .logo{width: 40px; top: 30px; } }
     </style>
   </head>
 
   <body>
-    <div class="outer">
-      <div class="inner">
-        <img class="logo" src="/public/fastify.png" alt="Fastify on Nubo" />
+    <a href="https://nubo.app">
+      <div class="logo">
+        <svg
+          width="100%"
+          viewBox="0 0 65 65"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="32.5"
+            cy="32.5"
+            r="23.5"
+            stroke="white"
+            stroke-width="18"
+          ></circle>
+        </svg>
+      </div>
+    </a>
 
-        <div class="title">Fastify on Nubo</div>
-        <div class="region">{{ region }}</div>
-        <div class="location">{{ location }}</div>
+    <div class="box">
+      <div class="box-header">
+        <svg
+          class="fastify-logo"
+          width="50"
+          viewBox="0 0 198 127"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M191.126 17.9716L197.337 1.88395L197.067 0.887247L135.618 17.0774C142.17 7.60056 139.919 0 139.919 0C139.919 0 120.296 12.5317 105.455 12.2041C90.6155 11.8757 85.8317 7.91507 63.0762 15.1742C40.3208 22.4278 33.8919 44.6938 27.2942 49.4769C20.6965 54.26 0 69.8412 0 69.8412L0.0447092 70.1179L18.7046 64.177C18.7046 64.177 13.5862 68.9986 2.71339 83.6525L2.2054 83.183L2.22467 83.2863C2.22467 83.2863 10.963 96.6405 19.5402 94.1715C20.402 93.9209 21.3725 93.5093 22.4332 92.9689C25.8866 94.8922 30.3938 96.7823 35.3704 97.3026C35.3704 97.3026 32.0018 93.3867 29.1913 88.9312C29.9498 88.4425 30.7283 87.9345 31.5192 87.4204L31.1523 87.6778L38.2572 90.2879L37.4732 83.6078C37.4987 83.5947 37.518 83.5754 37.5434 83.5623L44.5265 86.1277L43.6585 80.0518C44.5304 79.5949 45.4136 79.1597 46.3072 78.7468L53.5863 51.2144L83.6841 30.6836L81.2921 36.7024C75.1901 51.7093 63.7322 55.2521 63.7322 55.2521L58.9483 57.0651C55.3932 61.2701 53.8946 62.3054 52.6736 76.4188C55.5412 75.6989 58.28 75.5246 60.7613 76.1937C73.6214 79.6595 78.0769 95.1558 74.6112 99.4441C73.7432 100.518 71.6796 102.35 69.0757 104.505H63.8548L63.7838 108.735C63.6035 108.877 63.4239 109.012 63.2496 109.153H57.9385L57.8745 113.281C57.4051 113.642 56.9356 113.988 56.4862 114.329C51.4965 114.432 45.1756 110.079 45.1756 110.079C45.1756 114.04 48.4748 120.135 48.4748 120.135C48.4748 120.135 48.6929 120.033 49.0591 119.852C48.7377 120.09 48.558 120.219 48.558 120.219C48.558 120.219 61.9122 129.124 70.3229 125.826C77.8002 122.893 97.1608 107.629 113.872 100.402L164.442 87.0797L171.11 69.8026L132.57 79.9547V64.4406L177.791 52.5256L184.459 35.2486L132.583 48.9188V33.3962L191.126 17.9716Z"
+            fill="#EDDEFF"
+          ></path>
+        </svg>
+
+        <h1>Fastify</h1>
+      </div>
+
+      <div class="box-footer">
+        <div class="box-footer-item">
+          <div class="label">Runtime</div>
+          <div class="value" style="color: #1CDD97">{{runtime}}</div>
+        </div>
+
+        <div class="box-footer-item">
+          <div class="label">Region</div>
+          <div class="value" style="color: #2ACDD8">{{region}}</div>
+        </div>
+
+        <div class="box-footer-item">
+          <div class="label">Location</div>
+          <div class="value" style="color: #2ACDD8">{{location}}</div>
+        </div>
       </div>
     </div>
   </body>
+
 </html>
