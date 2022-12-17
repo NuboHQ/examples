@@ -1,0 +1,19 @@
+{
+  "version": "1.0.71",
+  "name": "bun",
+  "module": "src/index.js",
+  "scripts": {
+    "dev": "bun --hot run src/index.ts",
+    "start": "bun run src/index.ts",
+    "generate": "prisma generate --data-proxy",
+    "db:push": "prisma db push"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.7.1",
+    "hono": "^2.2.5"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prisma": "^4.7.1"
+  }
+}
