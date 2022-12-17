@@ -6,7 +6,8 @@
     "dev": "bun --hot run src/index.ts",
     "start": "bun run src/index.ts",
     "generate": "prisma generate --data-proxy",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "postinstall": "bun run generate"
   },
   "dependencies": {
     "@prisma/client": "^4.7.1",
