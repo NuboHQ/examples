@@ -13,9 +13,14 @@ app.get('/', (c) => {
 });
 
 app.get('/messages', async (c) => {
-  const messages = await prisma.message.findMany();
+  try {
+    const messages = await prisma.message.findMany();
 
-  return c.json(messages);
+    return c.json(messages);
+  } catch (error) {
+    console.log(error);
+    return c.text('Error');
+  }
 });
 
 app.get('/add', async (c) => {
