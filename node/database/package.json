@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.7.1",
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "express-handlebars": "^6.0.2"
   },
