@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { serveStatic } from 'hono/serve-static.bun';
 import { prisma } from './prisma';
 
-const port = Number(process.env.PORT) || 5000;
+const port = Number(process.env.PORT) || 3000;
 
 const app = new Hono();
 

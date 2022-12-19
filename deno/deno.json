@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "dev": "denon run -A main.ts"
+  }
+}
